@@ -20,7 +20,13 @@
 
 @media (max-width: 880px) {
     .account {
-        grid-template-columns: minmax(min-content, max-content);
+        grid-template-columns: minmax(min-content, 1fr);
         padding-bottom: 36px;
+    }
+}
+
+@media (max-width: 618px) {
+    .account {
+        width: calc(100% - 19px * 2);
     }
 }
