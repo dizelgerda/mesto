@@ -1,12 +1,11 @@
-.footer {
+.gallery {
     max-width: 1280px;
 
     margin: auto;
-    padding: 67px 0 60px;
 }
 
 @media (max-width: 1280px) {
-    .footer  {
+    .gallery {
         width: calc(100% - 19px * 2);
     }
 }

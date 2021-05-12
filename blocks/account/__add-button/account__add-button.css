@@ -14,3 +14,13 @@
 
     cursor: pointer;
 }
+.account__add-button:hover {
+    opacity: 0.6;
+}
+
+
+@media (max-width: 880px) {
+    .account__add-button {
+        width: 100%;
+    }
+}

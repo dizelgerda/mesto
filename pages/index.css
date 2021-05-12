@@ -21,6 +21,7 @@
 @import url(../blocks/account/__add-button/account__add-button.css);
 @import url(../blocks/account/__edit-button/account__edit-button.css);
 
+@import url(../blocks/gallery/gallery.css);
 @import url(../blocks/gallery/__cards/gallery__cards.css);
 
 @import url(../blocks/footer/footer.css);

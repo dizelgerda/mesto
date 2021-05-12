@@ -11,3 +11,16 @@
     align-items: center;
     gap: 30px;
 }
+
+@media (max-width: 1280px) {
+    .account {
+        width: calc(100% - 19px * 2);
+    }
+}
+
+@media (max-width: 880px) {
+    .account {
+        grid-template-columns: minmax(min-content, max-content);
+        padding-bottom: 36px;
+    }
+}

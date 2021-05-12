@@ -9,3 +9,13 @@
     line-height: 22px;
     color: #FFFFFF;
 }
+
+@media (max-width: 880px) {
+    .account__about {
+        margin-bottom: 6px;
+
+        text-align: center;
+        font-size: 14px;
+        line-height: 17px;
+    }
+}

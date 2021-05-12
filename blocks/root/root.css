@@ -1,6 +1,6 @@
 .root {
-    min-height: 320px;
-
+    min-width: 320px;
+    
     background-color: #000000;
     font-family: 'Inter', sans-serif;
 }
