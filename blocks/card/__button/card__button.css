@@ -1,0 +1,15 @@
+.card__button {
+    width: 22px;
+    height: 19px;
+    margin-right: 30px;
+
+    background-image: url(../../../images/like.svg);
+    background-repeat: no-repeat;
+    background-size: 22px 19px;
+    background-position: center;
+    background-color: #FFFFFF;
+
+    border: none;
+
+    cursor: pointer;
+}
