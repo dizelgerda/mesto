@@ -1,0 +1,4 @@
+.account__profile {
+    display: flex;
+    flex-direction: column;
+}

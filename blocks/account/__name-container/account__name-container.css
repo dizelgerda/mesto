@@ -1,0 +1,6 @@
+.account__name-container {
+    margin-bottom: 16px;
+
+    display: flex;
+    align-items: center;
+}
