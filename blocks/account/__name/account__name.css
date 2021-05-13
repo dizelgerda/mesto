@@ -1,6 +1,9 @@
 .account__name {
     margin: 0;
-    margin-right: 18px;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 
     font-style: normal;
     font-weight: 500;
@@ -11,8 +14,6 @@
 
 @media (max-width: 880px) {
     .account__name {
-        margin-right: 10px;
-
         text-align: center;
         font-size: 27px;
         line-height: 33px;

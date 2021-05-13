@@ -1,10 +1,15 @@
 .header {
     position: relative;
     max-width: 880px;
-    min-height: 74px;
 
     margin: auto;
-    padding-top: 45px;
+    padding: 45px 0 41px;
+}
+
+@media (max-width: 500px) {
+    .header {
+        padding: 28px 0 31.6px;
+    }
 }
 
 .header::before {

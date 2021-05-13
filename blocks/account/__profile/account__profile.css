@@ -1,4 +1,12 @@
 .account__profile {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    justify-content: center;
+}
+
+@media (max-width: 880px) {
+    .account__profile {
+        gap: 14px;
+    }
 }

@@ -2,13 +2,15 @@ let container = document.querySelector('.root');
 
 let popupEditProfile = container.querySelector('.popup');
 let openEditProfileButton = container.querySelector('.account__edit-button');
-let closeEditProfileButton = container.querySelector('.form__close-button');
+let closeEditProfileButton = container.querySelector('.popup__close-button');
 
 let name = container.querySelector('.account__name');
 let about = container.querySelector('.account__about');
 
-let formName = container.querySelector('.form__name-field');
-let formAbout = container.querySelector('.form__about-field');
+let formName = container.querySelector('.form__field_type_name');
+let formAbout = container.querySelector('.form__field_type_about');
+
+let formElement = container.querySelector('.form');
 
 
 function openEditProfile() {
@@ -21,12 +23,6 @@ function closeEditProfile() {
     popupEditProfile.classList.remove('popup_opened');
 }
 
-openEditProfileButton.addEventListener(('click'), openEditProfile);
-closeEditProfileButton.addEventListener(('click'), closeEditProfile);
-
-
-let formElement = container.querySelector('.form');
-
 function formSubmitHandler (evt) {
     evt.preventDefault(); 
 
@@ -35,4 +31,6 @@ function formSubmitHandler (evt) {
     closeEditProfile();
 }
 
+openEditProfileButton.addEventListener('click', openEditProfile);
+closeEditProfileButton.addEventListener('click', closeEditProfile);
 formElement.addEventListener('submit', formSubmitHandler); 

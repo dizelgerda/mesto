@@ -3,6 +3,7 @@
     z-index: 2;
     max-width: 430px;
 
+    margin: auto;
     padding: 34px 36px 37px;
     box-sizing: border-box;
 
@@ -15,5 +16,6 @@
 @media (max-width: 500px) {
     .form {
         width: calc(100% - 19px * 2);
+        padding: 25px 22px;
     }
 }

@@ -11,16 +11,18 @@
   <title>MESTO</title>
 </head>
 <body>
-    <div class="root">
+    <main class="root">
 
       <div class="popup">
-        <form class="form popup__form">
-          <button class="form__close-button"></button>
-          <h2 class="form__title">Редактировать профиль</h2>
-          <input type="text" class="form__field form__name-field" placeholder="Имя"  required>
-          <input type="text" class="form__field form__about-field" placeholder="О себе" required>
-          <button class='form__button' type='submit'>Сохранить</button>
-        </form>
+        <div class="popup__container">
+          <button class="popup__close-button" type="reset"></button>
+          <form class="form popup__form" name="edit-profile">
+            <h2 class="form__title">Редактировать профиль</h2>
+            <input type="text" name="name" class="form__field form__field_type_name" placeholder="Имя"  required>
+            <input type="text" name="about" class="form__field form__field_type_about" placeholder="О себе" required>
+            <button class='form__button' type='submit'>Сохранить</button>
+          </form>
+        </div>
       </div>
 
       <header class="header">
@@ -32,11 +34,11 @@
         <div class="account__profile">
           <div class="account__name-container">
             <h1 class="account__name">Николас Кейдж</h1>
-            <button class="account__edit-button"></button>
+            <button class="account__edit-button" type="button"></button>
           </div>
           <p class="account__about">Американский актёр, кинорежиссёр и продюсер</p>
         </div>
-        <button class="account__add-button"></button>
+        <button class="account__add-button" type="button"></button>
       </section>
 
       <section class="gallery">
@@ -44,41 +46,41 @@
           <li class="card">
             <img src="./images/Krmel.jpg" alt="Кремль" class="card__image">
             <h2 class="card__title">Московский кремль</h2>
-            <button class="card__button"></button>
+            <button class="card__button" type="button"></button>
           </li>
           <li class="card">
             <img src="./images/baikal.jpg" alt="Байкал" class="card__image">
             <h2 class="card__title">Байкал</h2>
-            <button class="card__button"></button>
+            <button class="card__button" type="button"></button>
           </li>
           <li class="card">
             <img src="./images/building.jpg" alt="Здание" class="card__image">
             <h2 class="card__title">Санкт-Петербург</h2>
-            <button class="card__button"></button>
+            <button class="card__button" type="button"></button>
           </li>
           <li class="card">
             <img src="./images/ice.jpg" alt="Сибирь" class="card__image">
             <h2 class="card__title">Сибирь</h2>
-            <button class="card__button"></button>
+            <button class="card__button" type="button"></button>
           </li>
           <li class="card">
             <img src="./images/north.jpg" alt="Крайний север" class="card__image">
             <h2 class="card__title">Крайний север</h2>
-            <button class="card__button"></button>
+            <button class="card__button" type="button"></button>
           </li>
           <li class="card">
             <img src="./images/taiga.jpg" alt="Тайга" class="card__image">
             <h2 class="card__title">Тайга</h2>
-            <button class="card__button"></button>
+            <button class="card__button" type="button"></button>
           </li>
         </ul>
       </section>
 
       <footer class="footer">
-        <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
+        <p class="footer__copyright">&copy; 2021 Mesto Russia</p>
       </footer>
-    </div>
+    </main>
 
-    <script src="./pages/index.js"></script>
+    <script src="./scripts/index.js"></script>
 </body>
 </html>

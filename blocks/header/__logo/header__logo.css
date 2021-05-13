@@ -8,3 +8,10 @@
         margin-left: 27px;
     }
 }
+
+@media (max-width: 500px) {
+    .header__logo {
+        width: 103.74px;
+        height: 24.4px;
+    }
+}

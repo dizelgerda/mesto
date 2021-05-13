@@ -1,11 +1,12 @@
 .card {
-    height: 361px;
-
     display: grid;
     grid-template-columns: 1fr min-content;
     grid-template-rows: repeat(2, min-content);
     align-items: center;
     gap: 25px;
+
+    padding-bottom: 31px;
+    box-sizing: border-box;
 
     background: #FFFFFF;
     border-radius: 10px;
