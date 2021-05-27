@@ -8,7 +8,16 @@
 
 @media (max-width: 880px) {
     .account__name-container {
+        grid-template-columns: min-content auto min-content;
         margin: auto;
         gap: 10px;
+    }
+
+    .account__name-container::after {
+        content: '';
+        width: 18px;
+        height: 18px;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
     }
 }
