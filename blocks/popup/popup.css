@@ -4,7 +4,11 @@
     height: 100%;
     z-index: 1;
 
-    display: none;
+    visibility: collapse;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s ease-in;
+
+    display: flex;
     justify-content: center;
     align-items: center;
 }
