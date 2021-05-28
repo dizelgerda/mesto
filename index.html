@@ -31,7 +31,7 @@
           <form class="form popup__form" name="edit-profile">
             <h2 class="form__title">Новое место</h2>
             <input type="text" name="name" class="form__field form__field_type_name" placeholder="Название"  required>
-            <input type="url" name="about" class="form__field form__field_type_about" placeholder="Ссылка на картинку" required>
+            <input type="url" name="about" class="form__field form__field_type_link" placeholder="Ссылка на картинку" required>
             <button class='form__button' type='submit'>Создать</button>
           </form>
         </div>
@@ -81,10 +81,11 @@
         <img src="#" alt="none" class="card__image">
         <button class="card__button-delete" type="button"></button>
         <h2 class="card__title"></h2>
-        <button class="card__button" type="button"></button>
+        <button class="card__button-like" type="button"></button>
       </li>
     </template>
 
     <script src="./scripts/index.js"></script>
+    <script src="./scripts/initial-сards.js"></script>
 </body>
 </html>
