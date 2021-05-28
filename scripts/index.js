@@ -100,6 +100,7 @@ buttonClosePopupProfile.addEventListener('click', () => closePopup(popupProfile)
 formPopupProfile.addEventListener('submit', (evt) => {
   submitFormPopupProfile(evt);
   closePopup(popupProfile);
+  formPopupProfile.reset();
 });
 
 buttonOpenPopupAddCard.addEventListener('click', () => openPopup(popupAddCard));
@@ -108,6 +109,7 @@ buttonClosePopupAddCard.addEventListener('click', () => closePopup(popupAddCard)
 formPopupAddCard.addEventListener('submit', (evt) => {
   submitFormPopupAddCard(evt);
   closePopup(popupAddCard);
+  formPopupAddCard.reset();
 });
 
 buttonClosePopupView.addEventListener('click', () => closePopup(popupView));
