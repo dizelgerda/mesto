@@ -1,3 +1,5 @@
+const cards = document.querySelector('.gallery__cards');
+
 function createCard(dataNewCard) {
     const cardContainer = document.querySelector('#card-template').content;
     const newCard = cardContainer.querySelector('.card').cloneNode(true);
@@ -12,18 +14,15 @@ function createCard(dataNewCard) {
     return newCard;
 }
 
-function checkLike(evt) { evt.target.classList.toggle('card__button-like_active'); }
-function checkDeleteCard(evt) {
-    const card = evt.target.closest('.card');
-    card.remove();
-}
+function addCard(newCard) { cards.prepend(newCard); }
 
+function checkLike(evt) { evt.target.classList.toggle('card__button-like_active'); }
+function checkDeleteCard(evt) { evt.target.closest('.card').remove(); }
 
 function checkCardsButtons(evt) {
     if (evt.target.classList.contains('card__button-like')) checkLike(evt);
     else if (evt.target.classList.contains('card__button-delete')) checkDeleteCard(evt);
     else if (evt.target.classList.contains('card__image')) expandCardImage(evt);
 }
-
 
 cards.addEventListener('click', checkCardsButtons);

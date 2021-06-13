@@ -20,6 +20,10 @@
     opacity: 0.6;
 }
 
+.account__edit-button:focus {
+    outline: none;
+}
+
 @media (max-width: 880px) {
     .account__edit-button {
         width: 18px;
