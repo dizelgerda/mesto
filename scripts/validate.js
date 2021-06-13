@@ -28,11 +28,13 @@ function checkInputValidity(evt) {
 }
 
 function showInputError(evt) {
+    evt.target.classList.add('form__field_type_error');
     const errorSpan = evt.currentTarget.querySelector(`#${evt.target.name}-error`);
     errorSpan.textContent = evt.target.validationMessage;
 }
 
 function hideInputError(evt) {
+    evt.target.classList.remove('form__field_type_error');
     const errorSpan = evt.currentTarget.querySelector(`#${evt.target.name}-error`);
     errorSpan.textContent = '';
 }

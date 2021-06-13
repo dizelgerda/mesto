@@ -1,7 +1,7 @@
-.popup__field_type_error {
+.form__field_type_error {
     border-color: #FF0000;
 }
 
-.popup__field_type_error:focus {
+.form__field_type_error:focus {
     outline-color: #FF0000;
 }
