@@ -13,7 +13,7 @@
 
 @media (max-width: 500px) {
     .form {
-        width: 282px;
+        width: calc(100vw - 30px * 2);
         padding: 25px 22px;
     }
 }
