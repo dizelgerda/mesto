@@ -1,7 +1,7 @@
 .form {
     position: relative;
     z-index: 2;
-    max-width: 430px;
+    width: 330px;
 
     padding: 34px 36px 37px;
     box-sizing: border-box;
