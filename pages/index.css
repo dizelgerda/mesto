@@ -29,7 +29,7 @@
 @import url(../blocks/form/__field/form__field.css);
 @import url(../blocks/form/__field/_type/popup__field_type_error.css);
 @import url(../blocks/form/__button/form__button.css);
-@import url(../blocks/form/__alert/from__alert.css);
+@import url(../blocks/form/__error/from__error.css);
 @import url(../blocks/form/__button/_disabled/form__button_disabled.css);
 
 @import url(../blocks/account/account.css);
