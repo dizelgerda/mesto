@@ -3,13 +3,11 @@ const formPopupAddCard = document.forms.addCard;
 const inputNamePopupAddCard = formPopupAddCard.elements.place;
 const inputLinkPopupAddCard = formPopupAddCard.elements.link;
 
-function submitFormPopupAddCard(evt) {
-    const dataNewCard = {
+function submitFormPopupAddCard() {
+    const newCard = createCard({
         name: inputNamePopupAddCard.value,
         link: inputLinkPopupAddCard.value
-    };
-
-    const newCard = createCard(dataNewCard);
+    });
     addCard(newCard);
 
     closePopup(popupAddCard);
@@ -17,8 +15,17 @@ function submitFormPopupAddCard(evt) {
 
 
 buttonOpenPopupAddCard.addEventListener('click', () => {
+    formPopupAddCard.reset();
+
+    formPopupAddCard.querySelectorAll('.form__alert').forEach((elm) => elm.textContent = '');
+    formPopupAddCard.querySelectorAll('.form__field').forEach((elm) => elm.classList.remove('form__field_type_error'));
+
+    toggleButtonState(formPopupAddCard, {
+        submitButtonSelector: '.form__button',
+        inactiveButtonClass: 'form__button_disabled'
+    });
+
     openPopup(popupAddCard);
-    toggleButtonState(formPopupAddCard);
 });
 
 formPopupAddCard.addEventListener('submit', submitFormPopupAddCard)

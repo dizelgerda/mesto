@@ -10,9 +10,6 @@ function openPopup(popup) {
 function closePopup(popup) {
     popup.classList.remove('popup_opened');
     document.removeEventListener('keydown', closeByEscape);
-
-    const form = popup.querySelector('.form')
-    if (form) form.reset();
 }
 
 function closeByEscape(evt) { if (evt.key == 'Escape') closePopup(document.querySelector('.popup_opened')); }
