@@ -8,8 +8,9 @@ function updateFormPopupProfile() {
     inputNamePopupProfile.value = accountName.textContent;
     inputAboutPopupProfile.value = accountAbout.textContent;
 
-    formPopupProfile.querySelectorAll('.form__alert').forEach((elm) => elm.textContent = '');
-    formPopupProfile.querySelectorAll('.form__field').forEach((elm) => elm.classList.remove('form__field_type_error'));
+    formPopupProfile.querySelectorAll('.form__field').forEach((elm) => hideInputError(formPopupProfile, elm, {
+        inputErrorClass: 'form__field_type_error'
+    }));
 
     toggleButtonState(formPopupProfile, {
         submitButtonSelector: '.form__button',

@@ -17,8 +17,9 @@ function submitFormPopupAddCard() {
 buttonOpenPopupAddCard.addEventListener('click', () => {
     formPopupAddCard.reset();
 
-    formPopupAddCard.querySelectorAll('.form__alert').forEach((elm) => elm.textContent = '');
-    formPopupAddCard.querySelectorAll('.form__field').forEach((elm) => elm.classList.remove('form__field_type_error'));
+    formPopupAddCard.querySelectorAll('.form__field').forEach((elm) => hideInputError(formPopupAddCard, elm, {
+        inputErrorClass: 'form__field_type_error'
+    }));
 
     toggleButtonState(formPopupAddCard, {
         submitButtonSelector: '.form__button',

@@ -35,18 +35,21 @@ function toggleButtonState(form, settings) {
 }
 
 function checkInputValidity(evt, settings) {
-    if (!evt.target.validity.valid) showInputError(evt, settings);
-    else hideInputError(evt, settings);
+    const input = evt.target;
+    const form = evt.currentTarget;
+
+    if (!input.validity.valid) showInputError(form, input, settings);
+    else hideInputError(form, input, settings);
 }
 
-function showInputError(evt, settings) {
-    evt.target.classList.add(settings.inputErrorClass);
-    const errorSpan = evt.currentTarget.querySelector(`#${evt.target.name}-error`);
-    errorSpan.textContent = evt.target.validationMessage;
+function showInputError(form, input, settings) {
+    input.classList.add(settings.inputErrorClass);
+    const errorSpan = form.querySelector(`#${input.name}-error`);
+    errorSpan.textContent = input.validationMessage;
 }
 
-function hideInputError(evt, settings) {
-    evt.target.classList.remove(settings.inputErrorClass);
-    const errorSpan = evt.currentTarget.querySelector(`#${evt.target.name}-error`);
+function hideInputError(form, input, settings) {
+    input.classList.remove(settings.inputErrorClass);
+    const errorSpan = form.querySelector(`#${input.name}-error`);
     errorSpan.textContent = '';
 }
