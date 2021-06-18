@@ -25,11 +25,11 @@ function toggleButtonState(form, settings) {
     const button = form.querySelector(settings.submitButtonSelector);
 
     if (form.checkValidity()) {
-        button.classList.remove(settings.inactiveButtonClass);
+        // button.classList.remove(settings.inactiveButtonClass);
         button.removeAttribute('disabled');
     }
     else {
-        button.classList.add(settings.inactiveButtonClass);
+        // button.classList.add(settings.inactiveButtonClass);
         button.setAttribute('disabled', 'disabled');
     }
 }
@@ -45,6 +45,7 @@ function checkInputValidity(evt, settings) {
 function showInputError(form, input, settings) {
     input.classList.add(settings.inputErrorClass);
     const errorSpan = form.querySelector(`#${input.name}-error`);
+    
     errorSpan.textContent = input.validationMessage;
 }
 

@@ -5,8 +5,8 @@ const inputLinkPopupAddCard = formPopupAddCard.elements.link;
 
 function submitFormPopupAddCard() {
     const newCard = createCard({
-        name: inputNamePopupAddCard.value,
-        link: inputLinkPopupAddCard.value
+        name: inputNamePopupAddCard.value.trim(),
+        link: inputLinkPopupAddCard.value.trim()
     });
     addCard(newCard);
 

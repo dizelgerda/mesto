@@ -19,8 +19,8 @@ function updateFormPopupProfile() {
 }
 
 function submitFormPopupProfile() {
-    accountName.textContent = inputNamePopupProfile.value;
-    accountAbout.textContent = inputAboutPopupProfile.value;
+    accountName.textContent = inputNamePopupProfile.value.trim();
+    accountAbout.textContent = inputAboutPopupProfile.value.trim();
 
     closePopup(popupProfile);
 }
