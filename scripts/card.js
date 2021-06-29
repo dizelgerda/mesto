@@ -28,13 +28,16 @@ export class Card {
     _copyTemplate() { return document.querySelector(this._cardTemplateId).content.querySelector('.card').cloneNode(true); }
 
     _addingListeners(newCard) {
-        newCard.querySelector('.card__button-delete').addEventListener('click', this._checkDeleteButton);
+        newCard.querySelector('.card__button-delete').addEventListener('click', () => this._checkDeleteButton());
         newCard.querySelector('.card__button-like').addEventListener('click', this._checkLikeButton);
         newCard.querySelector('.card__image').addEventListener('click', this._checkImageButton);
     }
 
     _checkLikeButton() { this.classList.toggle('card__button-like_active'); }
-    _checkDeleteButton() { this.closest('.card').remove(); }
+    _checkDeleteButton() {
+        this._element.remove();
+        this._element = null;
+    }
     _checkImageButton() {
         imagePopupView.src = this.src;
         imagePopupView.alt = this.alt;
