@@ -4,10 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Проектная работа №7: МЕСТО">
+  <meta name="description" content="Проектная работа №8: МЕСТО">
   <meta name="author" content="Даниил Коваленко">
-
-  <link rel="stylesheet" href="./pages/index.css">
 
   <title>MESTO</title>
 </head>
@@ -56,12 +54,12 @@
     </div>
 
     <header class="header">
-      <img src="./images/logo.svg" alt="Логотип" class="logo header__logo">
+      <img src="<%=require('./images/logo.svg')%>" alt="Логотип" class="logo header__logo">
     </header>
 
     <main>
       <section class="account">
-        <img src="./images/profile-photo.jpg" alt="Фото профиля" class="account__photo-profile">
+        <img src="<%=require('./images/profile-photo.jpg')%>" alt="Фото профиля" class="account__photo-profile">
         <div class="account__profile">
           <div class="account__name-container">
             <h1 class="account__name">Николас Кейдж</h1>
@@ -93,7 +91,6 @@
     </li>
   </template>
 
-  <script type="module" src="./scripts/index.js"></script>
 </body>
 
 </html>
