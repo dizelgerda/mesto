@@ -1,4 +1,4 @@
-import { openPopup } from "./index.js";
+import { openPopup } from "./utilities.js";
 
 const popupView = document.querySelector('#popup-view');
 const imagePopupView = popupView.querySelector('.popup__image');
@@ -12,39 +12,36 @@ export class Card {
     }
 
     createCard() {
-        const newCard = this._copyTemplate();
+        this._element = this._copyTemplate();
 
-        newCard.querySelector('.card__title').textContent = this._name;
+        this._element.querySelector('.card__title').textContent = this._name;
 
-        const cardImage = newCard.querySelector('.card__image');
+        const cardImage = this._element.querySelector('.card__image');
         cardImage.src = this._link;
         cardImage.alt = this._name;
 
-        this._addingListeners(newCard);
+        this._addingListeners(this._element);
 
-        return newCard;
+        return this._element;
     }
 
     _copyTemplate() { return document.querySelector(this._cardTemplateId).content.querySelector('.card').cloneNode(true); }
 
     _addingListeners(newCard) {
-        newCard.querySelector('.card__button-delete').addEventListener('click', this._checkDeleteButton);
+        newCard.querySelector('.card__button-delete').addEventListener('click', () => this._checkDeleteButton());
         newCard.querySelector('.card__button-like').addEventListener('click', this._checkLikeButton);
         newCard.querySelector('.card__image').addEventListener('click', this._checkImageButton);
     }
 
-    _checkLikeButton(evt) { evt.target.classList.toggle('card__button-like_active'); }
-    _checkDeleteButton(evt) {
-        evt.target.closest('.card').remove();
-        delete this;
+    _checkLikeButton() { this.classList.toggle('card__button-like_active'); }
+    _checkDeleteButton() {
+        this._element.remove();
+        this._element = null;
     }
-    _checkImageButton(evt) {
-        const card = evt.target.closest('.card');
-        const signature = card.querySelector('.card__title');
-
-        imagePopupView.src = evt.target.src;
-        imagePopupView.alt = evt.target.alt;
-        signaturePopupView.textContent = signature.textContent;
+    _checkImageButton() {
+        imagePopupView.src = this.src;
+        imagePopupView.alt = this.alt;
+        signaturePopupView.textContent = this.alt;
 
         openPopup(popupView);
     }
