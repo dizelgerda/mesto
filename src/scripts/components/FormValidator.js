@@ -1,4 +1,4 @@
-export class FormValidator {
+export default class FormValidator {
     constructor(settings, form) {
         this._settings = settings;
         this._form = form;
@@ -6,11 +6,11 @@ export class FormValidator {
 
     enableValidation() { this._setEventListeners(); }
 
-    _setEventListeners(){
+    _setEventListeners() {
         this._form.addEventListener('submit', (evt) => evt.preventDefault());
-    
+
         this._form.querySelectorAll(this._settings.inputSelector).forEach((input) => input.setAttribute('autocomplete', 'off'));
-    
+
         this._form.addEventListener('input', (evt) => {
             this._checkInputValidity(evt);
             this._toggleButtonState(evt.currentTarget);
@@ -19,7 +19,7 @@ export class FormValidator {
 
     _toggleButtonState(form) {
         const button = form.querySelector(this._settings.submitButtonSelector);
-    
+
         if (form.checkValidity()) {
             button.removeAttribute('disabled');
         }
@@ -31,7 +31,7 @@ export class FormValidator {
     _checkInputValidity(evt) {
         const input = evt.target;
         const form = evt.currentTarget;
-    
+
         if (!input.validity.valid) this._showInputError(form, input);
         else this._hideInputError(form, input);
     }
@@ -39,7 +39,7 @@ export class FormValidator {
     _showInputError(form, input) {
         input.classList.add(this._settings.inputErrorClass);
         const errorSpan = form.querySelector(`#${input.name}-error`);
-        
+
         errorSpan.textContent = input.validationMessage;
     }
 
