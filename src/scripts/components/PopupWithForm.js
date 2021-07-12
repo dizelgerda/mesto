@@ -1,17 +1,12 @@
 import Popup from '../components/Popup.js';
 
 export default class PopupWithForm extends Popup {
-    constructor(popupId, { handlerSubmit, handlerReset }) {
+    constructor(popupId, { handlerSubmit }) {
         super(popupId);
-        this._handlerSubmit = handlerSubmit;
-        this._handlerReset = handlerReset;
+        this._handlerSubmit = () => handlerSubmit(this._getInputValues());
     }
 
-    open() {
-        this._handlerReset();
-        this.setEventListeners();
-        super.open();
-    }
+    open() { super.open(); }
 
     _getInputValues() {
         const data = {};
@@ -25,7 +20,12 @@ export default class PopupWithForm extends Popup {
     }
 
     setEventListeners() {
-        super.setEventListeners();
         this._element.querySelector('.popup__form').addEventListener('submit', this._handlerSubmit);
+        super.setEventListeners();
+    }
+
+    deleteEventListeners() {
+        super.deleteEventListeners();
+        this._element.querySelector('.popup__form').removeEventListener('submit', this._handlerSubmit);
     }
 }

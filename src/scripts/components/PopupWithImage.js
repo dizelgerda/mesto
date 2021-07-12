@@ -4,8 +4,9 @@ export default class PopupWithImage extends Popup {
     constructor(popupId) { super(popupId); }
 
     open({ name, link }) {
-        this._element.querySelector('.popup__image').src = link;
-        this._element.querySelector('.popup__image').alt = name;
+        const popupImage = this._element.querySelector('.popup__image');
+        popupImage.src = link;
+        popupImage.alt = name;
         this._element.querySelector('.popup__image-signature').textContent = name;
         super.open();
     }
