@@ -38,7 +38,6 @@ const cardContainer = new Section({
     }
 }, selectorCardContainer);
 
-
 const popupProfile = new PopupWithForm(selectorPopupProfile, {
     handlerSubmit: ({ name, about }) => {
         session.setUserInfo({
@@ -70,11 +69,10 @@ const handleCardImageClick = (evt) => {
 
 const validatorFormProfile = new FormValidator(configFormSelectors, formPopupProfile)
 const validatorFormAddCard = new FormValidator(configFormSelectors, formPopupAddCard)
-
-
-cardContainer.renderItems();
 validatorFormProfile.enableValidation();
 validatorFormAddCard.enableValidation();
+
+cardContainer.renderItems();
 
 buttonOpenPopupProfile.addEventListener('click', () => {
     const { name, about } = session.getUserInfo();
