@@ -1,0 +1,36 @@
+.account__photo-button {
+    position: relative;
+
+    margin: 0;
+    padding: 0;
+
+    border: none;
+    background: none;
+    border-radius: 50%;
+}
+
+.account__photo-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+
+    background-color: rgba(0, 0, 0, 0.8);
+    background-image: url(../../../images/pen-for-avatar.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 26px 26px;
+
+    opacity: 0%;
+
+    transition: opacity 0.3s ease-in-out;
+
+    border-radius: 50%;
+}
+
+.account__photo-button:hover::before {
+    opacity: 100%;
+}

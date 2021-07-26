@@ -19,13 +19,8 @@ export default class FormValidator {
 
     _toggleButtonState(form) {
         const button = form.querySelector(this._configSelectors.submitButtonSelector);
-
-        if (form.checkValidity()) {
-            button.removeAttribute('disabled');
-        }
-        else {
-            button.setAttribute('disabled', 'disabled');
-        }
+        if (form.checkValidity()) button.removeAttribute('disabled');
+        else button.setAttribute('disabled', 'disabled');
     }
 
     _checkInputValidity(evt) {

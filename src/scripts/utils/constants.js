@@ -1,39 +1,15 @@
-const initialCards = [
-  {
-    name: 'Архыз',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-  },
-  {
-    name: 'Челябинская область',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-  },
-  {
-    name: 'Иваново',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-  },
-  {
-    name: 'Камчатка',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-  },
-  {
-    name: 'Холмогорский район',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-  },
-  {
-    name: 'Байкал',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-  }
-];
-
 const formPopupProfile = document.forms.editProfile;
 const formPopupAddCard = document.forms.addCard;
+const formPopupUpdateAvatar = document.forms.updateAvatar;
 
 const buttonOpenPopupProfile = document.querySelector('.account__edit-button');
 const buttonOpenPopupAddCard = document.querySelector('.account__add-button');
-
+const buttonOpenPopupUpdateAvatar = document.querySelector('.account__photo-button');
+ 
 const configUserSelectors = {
   nameSelector: '.account__name',
-  aboutSelector: '.account__about'
+  aboutSelector: '.account__about',
+  avatarSelector: '.account__photo-profile'
 };
 const configFormSelectors = {
   inputSelector: '.form__field',
@@ -46,23 +22,32 @@ const selectorTemplateCard = '#card-template';
 const selectorPopupProfile = '#popup-edit-profile';
 const selectorPopupAddCard = '#popup-add-card';
 const selectorPopupView = '#popup-view';
+const selectorPopupUpdateAvatar = '#popup-update-avatar';
+const selectorPopupMessageDeleteCard = '#popup-message'
 
-const elementPopupProfile = document.querySelector(selectorPopupProfile);
+const inputNamePopupProfile = formPopupProfile.elements.name;
+const inputAboutPopupProfile = formPopupProfile.elements.about;
 
+const inputAvatarPopupUpdateAvatar = formPopupUpdateAvatar.elements.avatar;
 
 
 export {
-  initialCards,
   formPopupProfile,
   formPopupAddCard,
+  formPopupUpdateAvatar,
   buttonOpenPopupProfile,
   buttonOpenPopupAddCard,
-  elementPopupProfile,
+  buttonOpenPopupUpdateAvatar,
   selectorCardContainer,
   configUserSelectors,
   selectorTemplateCard,
   selectorPopupProfile,
   selectorPopupAddCard,
   selectorPopupView,
-  configFormSelectors
+  selectorPopupMessageDeleteCard,
+  selectorPopupUpdateAvatar,
+  configFormSelectors,
+  inputNamePopupProfile,
+  inputAboutPopupProfile,
+  inputAvatarPopupUpdateAvatar
 };
