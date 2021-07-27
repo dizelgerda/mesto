@@ -8,14 +8,19 @@ export default class PopupWithMessage extends Popup {
 
         this._handlerSubmit = (evt) => {
             evt.preventDefault();
-            handlerSubmit(this._object);
+            handlerSubmit(this._deleteCandidate);
             this.close();
         }
     }
 
-    open(object) {
+    open(deleteCandidate) {
         super.open();
-        this._object = object;
+        this._deleteCandidate = deleteCandidate;
+    }
+
+    close() {
+        super.close();
+        this._deleteCandidate = null;
     }
 
     setEventListeners() {

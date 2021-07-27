@@ -1,8 +1,10 @@
+import { ESC } from '../utils/constants.js'
+
 export default class Popup {
     constructor(popupId) {
         this._element = document.querySelector(popupId);
 
-        this._handleEscClose = this._handleEscClose.bind(this);
+        this._handleKeyClose = this._handleKeyClose.bind(this);
         this._closeByClick = this._closeByClick.bind(this);
     }
 
@@ -18,16 +20,16 @@ export default class Popup {
 
     setEventListeners() {
         this._element.addEventListener('click', this._closeByClick);
-        document.addEventListener('keydown', this._handleEscClose);
+        document.addEventListener('keydown', this._handleKeyClose);
     }
 
     deleteEventListeners() {
         this._element.removeEventListener('click', this._closeByClick);
-        document.removeEventListener('keydown', this._handleEscClose);
+        document.removeEventListener('keydown', this._handleKeyClose);
     }
 
-    _handleEscClose(evt) {
-        if (evt.key == 'Escape') this.close();
+    _handleKeyClose(evt) {
+        if (evt.key == ESC) this.close();
     }
 
     _closeByClick(evt) {

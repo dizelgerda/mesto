@@ -11,8 +11,7 @@ export default class Api {
                 authorization: this._token
             }
         })
-            .then(this._handelResponse)
-            .catch(err => console.log(err));
+            .then(this._handelResponse);
     }
 
     getInitialCards() {
@@ -22,8 +21,7 @@ export default class Api {
                 authorization: this._token
             }
         })
-            .then(this._handelResponse)
-            .catch(err => console.log(err));
+            .then(this._handelResponse);
     }
 
     setUserInformation(data) {
@@ -35,8 +33,7 @@ export default class Api {
             },
             body: JSON.stringify(data)
         })
-            .then(this._handelResponse)
-            .catch(err => console.log(err));
+            .then(this._handelResponse);
     }
 
     setUserAvatar(data) {
@@ -48,8 +45,7 @@ export default class Api {
             },
             body: JSON.stringify(data)
         })
-            .then(this._handelResponse)
-            .catch(err => console.log(err));
+            .then(this._handelResponse);
     }
 
     setLike(id) {
@@ -59,8 +55,7 @@ export default class Api {
                 authorization: this._token
             }
         })
-            .then(this._handelResponse)
-            .catch(err => console.log(err));
+            .then(this._handelResponse);
     }
 
     removeLike(id) {
@@ -70,8 +65,7 @@ export default class Api {
                 authorization: this._token
             }
         })
-            .then(this._handelResponse)
-            .catch(err => console.log(err));
+            .then(this._handelResponse);
     }
 
     addCard(data) {
@@ -83,8 +77,7 @@ export default class Api {
             },
             body: JSON.stringify(data)
         })
-            .then(this._handelResponse)
-            .catch(err => console.log(err));
+            .then(this._handelResponse);
     }
 
     deleteCard(id) {
