@@ -44,7 +44,7 @@ export default class Card {
         else buttonLike.classList.remove('card__button-like_active');
     }
 
-    deleteElementCard() {
+    deleteElement() {
         this._element.remove();
         this._element = null;
     }

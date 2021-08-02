@@ -112,7 +112,7 @@ Promise.all([api.getUserInformation(), api.getInitialCards()])
             handlerSubmit: (card) => {
                 api.deleteCard(card.id)
                     .then((res) => {
-                        if (res.ok) card.deleteElementCard();
+                        if (res.ok) card.deleteElement();
                         else console.log(`Ошибка: ${res.status}`);
                     })
                     .catch(err => console.log(err));
