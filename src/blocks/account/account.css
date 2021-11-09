@@ -7,7 +7,7 @@
 
     display: grid;
     grid-template-columns: min-content 1fr min-content;
-    justify-content: center;
+    justify-items: start;
     align-items: center;
     gap: 30px;
 }
@@ -21,6 +21,7 @@
 @media (max-width: 880px) {
     .account {
         grid-template-columns: 1fr;
+        justify-items: center;
         padding-bottom: 36px;
     }
 }
